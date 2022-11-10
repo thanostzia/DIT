@@ -1,4 +1,4 @@
-//Solving the quadratic equation for 3 random numbers a, b, c in range [0,1]. Computing only for real solutions.
+//Solving the quadratic equation for 3 random numbers a, b, c in range [0,1]. Approximation: 3 decimal points. Computing only for real solutions.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,18 +16,18 @@ int main()
     printf("\n");
     if (D < 0)
     {
-        printf("For a = %f, b = %f, c = %f, the quadratic has no real solutions.\n", a, b, c);
+        printf("For a = %.3f, b = %.3f, c = %.3f, the quadratic has no real solutions.\n", a, b, c);
     }
     else if (D == 0)
     {
         x1 = (-1)*b/(2*a);
-        printf("For a = %f, b = %f, c = %f, the quadratic has a double root: x = %f\n", a, b, c, x1);
+        printf("For a = %.3f, b = %.3f, c = %.3f, the quadratic has a double root: x = %.3f\n", a, b, c, x1);
     }
     else
     {
         x1 = ((-1)*b-sqrt(D))/(2*a);
         x2 = ((-1)*b+sqrt(D))/(2*a);
-        printf("For a = %f, b = %f, c = %f, the quadratic has a two distinct roots: x1 = %f and x2 = %f\n", a, b, c, x1, x2);
+        printf("For a = %.3f, b = %.3f, c = %.3f, the quadratic has a two distinct roots: x1 = %.3f and x2 = %.3f\n", a, b, c, x1, x2);
     }
     return 0;
 }
