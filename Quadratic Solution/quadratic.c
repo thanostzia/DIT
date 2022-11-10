@@ -1,4 +1,4 @@
-//Solving the quadratic equation for 3 random numbers a, b, c in range [0,1]. Approximation: 3 decimal points. Computing only for real solutions.
+/* Solving the quadratic equation for 3 random numbers a, b, c in range [0,1]. Approximation: 3 decimal points. Computing only for real solutions. */
 
 #include <stdio.h>
 #include <stdlib.h>
