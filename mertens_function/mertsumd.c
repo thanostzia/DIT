@@ -13,7 +13,7 @@ int main()
         nexponent *= 10;
     }
 
-    //NOTE 1: Mertens function M(n) = The sum from k=1 to n of μ(k), where μ(k) is the Mobius function for value k. 
+    /* NOTE 1: Mertens function M(n) = The sum from k=1 to n of μ(k), where μ(k) is the Mobius function for value k. */
 
     ZP = 0;                /*Initializing variables for zero points ( M(n) = 0 ),*/
     M = 0;                 /*the Mertens function*/ 
