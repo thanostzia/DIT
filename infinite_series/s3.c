@@ -1,11 +1,10 @@
-/* Using an infinite sum series to compute π. The do_while loop computes (π^2)/12 */
-/* Average computation time: ~0.08sec */
-/* The same code format is followed in all .c files that compute the infinite series. */
+/* Using an infinite sum series to compute π. The do_while loop computes π/4 */
+/* Average computation time: ~12sec */
 
 #include <stdio.h>
 #include <math.h>
 
-#define PI 3.1415926535897932
+#define PI 3.14159265358979320
 
 int main()
 {
@@ -17,16 +16,15 @@ int main()
     sum = 0.0;
     do
     {
-        current = 1/((double)(i*i));
+        current = 1/((double)(i));
         if (count++ % 2) sum += current;
         else             sum -= current;
-        i++;
+        i += 2;
     } 
-    while (current > 1.0e-15);
-    /* The sum computes (π^2)/12 */
+    while (current > 1.0e-10);
+    /* The sum computes π/4 */
 
-    sum *= 12;   /* sum = π^2 */
-    sum = sqrt(sum);  /* sum = π */
+    sum *= 4;   /* sum = π */
 
     divergence = PI - sum;
     if (divergence < 0) divergence *= -1;
