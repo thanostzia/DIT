@@ -27,7 +27,6 @@ int main()
     sum += 3;   /* sum = π */
 
     divergence = PI - sum;
-    if (divergence < 0) divergence *= -1;
 
     printf("π (computed)   =%19.16lf\nπ (real value) = %.16lf\nDivergence: %23.16lf\n%ld iterations were performed for the computation.\n", sum, PI, divergence, --count);
 

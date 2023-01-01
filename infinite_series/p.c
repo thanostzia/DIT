@@ -1,5 +1,5 @@
 /* Using an infinite sum series to compute π. The do_while loop computes π/2 */
-/* Average computation time: ~0.006sec */
+/* Average computation time: ~24sec for e+10, ~4min for e+11*/
 
 #include <stdio.h>
 
@@ -21,13 +21,12 @@ int main()
         if (count++ % 2) j += 2;
         else           i += 2;
     } 
-    while (count <= 1.0e+10);
+    while (count <= 1.0e+11);
     /* The sum computes π/2 */
 
     sum *= 2;         /* sum = π */
 
     divergence = PI - sum;
-    if (divergence < 0) divergence *= -1;
 
     printf("π (computed)   =%19.16lf\nπ (real value) = %.16lf\nDivergence: %23.16lf\n%ld iterations were performed for the computation.\n", sum, PI, divergence, --count);
 

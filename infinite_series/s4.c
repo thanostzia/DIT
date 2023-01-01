@@ -24,7 +24,6 @@ int main()
     /* The sum computes 1/2 */
 
     divergence = ONEHALF - sum;
-    if (divergence < 0) divergence *= -1;
 
     printf("1/2 (computed)   =%19.16lf\n1/2 (real value) = %.16lf\nDivergence: %25.16lf\n%ld iterations were performed for the computation.\n", sum, ONEHALF, divergence, --count);
 

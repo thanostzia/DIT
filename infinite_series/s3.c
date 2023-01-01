@@ -26,7 +26,7 @@ int main()
     sum *= 4;   /* sum = π */
 
     divergence = PI - sum;
-    if (divergence < 0) divergence *= -1;
+    divergence *= -1;   /* As can be seen by removing this line of code, the computed value of π is larger that the actual one by a number of decibels, in comparison to the other C programs which compute a smaller value. */
 
     printf("π (computed)   =%19.16lf\nπ (real value) = %.16lf\nDivergence: %23.16lf\n%ld iterations were performed for the computation.\n", sum, PI, divergence, --count);
 
