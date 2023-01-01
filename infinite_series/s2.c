@@ -3,7 +3,6 @@
 /* The same code format is followed in all .c files that compute the infinite series. */
 
 #include <stdio.h>
-#include <math.h>
 
 #define LN2 0.6931471805599453
 

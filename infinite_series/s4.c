@@ -2,7 +2,6 @@
 /* Average computation time: ~0.4sec */
 
 #include <stdio.h>
-#include <math.h>
 
 #define ONEHALF 0.5000000000000000
 
