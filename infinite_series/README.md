@@ -22,7 +22,7 @@ the computed value would not change. This is because, even if more interations a
 
 Both the programs `s1.c` and `s1.6` use the math.h library. Therefore, in order to compile these programs, you will need the -lm linker flag, like this:
 
-> $ gcc -o program program.c
+> $ gcc -o program program.c -lm
 
 Replace "program.c" with the name of the program's source code file and "program" with the desired name for the compiled executable.
 
