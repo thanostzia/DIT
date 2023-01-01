@@ -22,7 +22,7 @@ int main()
         else             sum -= current;
         i++;
     } 
-    while (current > 1.0e-15);
+    while (current > 1.0e-16);
     /* The sum computes (π^2)/12 */
 
     sum *= 12;   /* sum = π^2 */
