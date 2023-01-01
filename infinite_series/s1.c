@@ -17,7 +17,7 @@ int main()
     sum = 0.0;
     do
     {
-        current = 1/((double)(i*i));
+        current = 1.0/(i*i);
         if (count++ % 2) sum += current;
         else             sum -= current;
         i++;
@@ -31,7 +31,7 @@ int main()
     divergence = PI - sum;
     if (divergence < 0) divergence *= -1;
 
-    printf("π (computed) =%21.16lf\nπ (real value) = %.16lf\nDivergence: %23.16lf\n%ld iterations were performed for the computation.\n", sum, PI, divergence, --count);
+    printf("π (computed)   =%19.16lf\nπ (real value) = %.16lf\nDivergence: %23.16lf\n%ld iterations were performed for the computation.\n", sum, PI, divergence, --count);
 
     return 0;
 }

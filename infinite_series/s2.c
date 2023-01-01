@@ -17,18 +17,18 @@ int main()
     sum = 0.0;
     do
     {
-        current = 1/((double)(i));
+        current = 1.0/i;
         if (count++ % 2) sum += current;
         else             sum -= current;
         i++;
     } 
-    while (current > 1.0e-8);
+    while (current > 1.0e-10);
     /* The sum computes ln(2) */
 
     divergence = LN2 - sum;
     if (divergence < 0) divergence *= -1;
 
-    printf("ln(2) (computed) = %20.16lf\nln(2) (real value) = %.16lf\nDivergence: %27.16lf\n%ld iterations were performed for computation.\n", sum, LN2, divergence, i);
+    printf("ln(2) (computed)   = %18.16lf\nln(2) (real value) = %.16lf\nDivergence: %27.16lf\n%ld iterations were performed for computation.\n", sum, LN2, divergence, i);
 
     return 0;
 }
