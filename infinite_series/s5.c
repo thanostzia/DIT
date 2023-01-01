@@ -1,5 +1,5 @@
-/* Using an infinite sum series to compute π. The do_while loop computes π/4 */
-/* Average computation time: ~12sec */
+/* Using an infinite sum series to compute π. The do_while loop computes (π-3)/4 */
+/* Average computation time: ~0.007sec */
 
 #include <stdio.h>
 #include <math.h>
@@ -11,20 +11,21 @@ int main()
     double sum, current, divergence;
     long i, count;
 
-    i = 1;
+    i = 2;
     count = 1;
     sum = 0.0;
     do
     {
-        current = 1.0/i;
+        current = 1.0/(i*(i+1)*(i+2));
         if (count++ % 2) sum += current;
         else             sum -= current;
         i += 2;
     } 
-    while (current > 1.0e-10);
-    /* The sum computes π/4 */
+    while (current > 1.0e-16);
+    /* The sum computes (π-3)/4 */
 
-    sum *= 4;   /* sum = π */
+    sum *= 4;   /* sum = π-3 */
+    sum += 3;   /* sum = π */
 
     divergence = PI - sum;
     if (divergence < 0) divergence *= -1;
