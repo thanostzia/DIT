@@ -34,7 +34,7 @@ Replace "program.c" with the name of the program's source code file and "program
 
 Once the program has been compiled, you can run it using the following command:
 
-    % ./program
+    $ ./program
 
 <br>	
     
