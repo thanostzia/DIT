@@ -22,6 +22,18 @@ This repository contains all projects, assignments, and exercises from the Intro
 	
 <br>
 
+- **Exercise 1 _(infinite_series)_:** Programs in C that implement various infinite series, for computational approximations.
+
+> More info inside the folder. 
+
+<br>
+
+- **slides_sourcecode:** Programs created by the instructor of the "Introduction to Programming" course.
+
+> These programs are designed to help students learn the C programming language and demonstrate how certain tasks are performed. The programs cover basic programming concepts and are used throughout the course.
+
+<br>
+
 ## Prerequisites
 
 To make use of the .c files, you will first need to compile them and afterwards run the created executable programs. It is advisory to use the gcc compiler provided by the GNU Project.<br><br>
